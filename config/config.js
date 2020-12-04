@@ -1,0 +1,33 @@
+require('dotenv').config()
+
+const {
+DB_HOST,
+DB_NAME,
+DB_USERNAME,
+
+
+} = process.env
+
+module.exports = {
+  "development": {
+    "username": DB_USERNAME,
+    // "password": null,
+    "database": DB_NAME,
+    "host": DB_HOST,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": DB_USERNAME,
+    // "password": null,
+    "database": DB_NAME,
+    "host": DB_HOST,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": DB_USERNAME,
+    // "password": null,
+    "database": DB_NAME,
+    "host": DB_HOST,
+    "dialect": "mysql"
+  }
+}
